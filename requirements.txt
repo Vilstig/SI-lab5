@@ -4,3 +4,6 @@ torch
 transformers
 scikit-learn
 matplotlib
+langchain-huggingface
+langchain-core
+tqdm
