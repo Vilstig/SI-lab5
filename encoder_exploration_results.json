@@ -1,0 +1,557 @@
+[
+  {
+    "accuracy": 0.745928338762215,
+    "f1_macro": 0.6405496103300556,
+    "f1_weighted": 0.7276873147779592,
+    "classification_report": {
+      "minus": {
+        "precision": 0.9393939393939394,
+        "recall": 0.8266666666666667,
+        "f1-score": 0.8794326241134752,
+        "support": 300.0
+      },
+      "neutral": {
+        "precision": 0.4032258064516129,
+        "recall": 0.21367521367521367,
+        "f1-score": 0.27932960893854747,
+        "support": 117.0
+      },
+      "plus": {
+        "precision": 0.6423611111111112,
+        "recall": 0.9390862944162437,
+        "f1-score": 0.7628865979381443,
+        "support": 197.0
+      },
+      "accuracy": 0.745928338762215,
+      "macro avg": {
+        "precision": 0.6616602856522212,
+        "recall": 0.6598093915860413,
+        "f1-score": 0.6405496103300556,
+        "support": 614.0
+      },
+      "weighted avg": {
+        "precision": 0.7419230294167907,
+        "recall": 0.745928338762215,
+        "f1-score": 0.7276873147779592,
+        "support": 614.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        248,
+        33,
+        19
+      ],
+      [
+        8,
+        25,
+        84
+      ],
+      [
+        8,
+        4,
+        185
+      ]
+    ],
+    "model": "Voicelab/herbert-base-cased-sentiment",
+    "max_length": 128,
+    "num_samples": 614,
+    "use_sigmoid": false,
+    "ambiguous_predictions": 0
+  },
+  {
+    "accuracy": 0.762214983713355,
+    "f1_macro": 0.6278914268729591,
+    "f1_weighted": 0.7315116033299807,
+    "classification_report": {
+      "minus": {
+        "precision": 0.9629629629629629,
+        "recall": 0.8666666666666667,
+        "f1-score": 0.9122807017543859,
+        "support": 300.0
+      },
+      "neutral": {
+        "precision": 0.36363636363636365,
+        "recall": 0.13675213675213677,
+        "f1-score": 0.19875776397515527,
+        "support": 117.0
+      },
+      "plus": {
+        "precision": 0.64,
+        "recall": 0.9746192893401016,
+        "f1-score": 0.772635814889336,
+        "support": 197.0
+      },
+      "accuracy": 0.762214983713355,
+      "macro avg": {
+        "precision": 0.6555331088664422,
+        "recall": 0.659346030919635,
+        "f1-score": 0.6278914268729591,
+        "support": 614.0
+      },
+      "weighted avg": {
+        "precision": 0.745137367156911,
+        "recall": 0.762214983713355,
+        "f1-score": 0.7315116033299807,
+        "support": 614.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        260,
+        26,
+        14
+      ],
+      [
+        7,
+        16,
+        94
+      ],
+      [
+        3,
+        2,
+        192
+      ]
+    ],
+    "model": "Voicelab/herbert-base-cased-sentiment",
+    "max_length": 256,
+    "num_samples": 614,
+    "use_sigmoid": false,
+    "ambiguous_predictions": 0
+  },
+  {
+    "accuracy": 0.758957654723127,
+    "f1_macro": 0.6262905839018132,
+    "f1_weighted": 0.7294235050256609,
+    "classification_report": {
+      "minus": {
+        "precision": 0.9660377358490566,
+        "recall": 0.8533333333333334,
+        "f1-score": 0.9061946902654867,
+        "support": 300.0
+      },
+      "neutral": {
+        "precision": 0.3404255319148936,
+        "recall": 0.13675213675213677,
+        "f1-score": 0.1951219512195122,
+        "support": 117.0
+      },
+      "plus": {
+        "precision": 0.6423841059602649,
+        "recall": 0.9847715736040609,
+        "f1-score": 0.7775551102204409,
+        "support": 197.0
+      },
+      "accuracy": 0.758957654723127,
+      "macro avg": {
+        "precision": 0.649615791241405,
+        "recall": 0.6582856812298438,
+        "f1-score": 0.6262905839018132,
+        "support": 614.0
+      },
+      "weighted avg": {
+        "precision": 0.7429817212751331,
+        "recall": 0.758957654723127,
+        "f1-score": 0.7294235050256609,
+        "support": 614.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        256,
+        31,
+        13
+      ],
+      [
+        6,
+        16,
+        95
+      ],
+      [
+        3,
+        0,
+        194
+      ]
+    ],
+    "model": "Voicelab/herbert-base-cased-sentiment",
+    "max_length": 512,
+    "num_samples": 614,
+    "use_sigmoid": false,
+    "ambiguous_predictions": 0
+  },
+  {
+    "accuracy": 0.745928338762215,
+    "f1_macro": 0.7133057509206613,
+    "f1_weighted": 0.7489480818979334,
+    "classification_report": {
+      "minus": {
+        "precision": 0.8916666666666667,
+        "recall": 0.7133333333333334,
+        "f1-score": 0.7925925925925926,
+        "support": 300.0
+      },
+      "neutral": {
+        "precision": 0.5074626865671642,
+        "recall": 0.5811965811965812,
+        "f1-score": 0.5418326693227091,
+        "support": 117.0
+      },
+      "plus": {
+        "precision": 0.7333333333333333,
+        "recall": 0.8934010152284264,
+        "f1-score": 0.8054919908466819,
+        "support": 197.0
+      },
+      "accuracy": 0.745928338762215,
+      "macro avg": {
+        "precision": 0.7108208955223881,
+        "recall": 0.729310309919447,
+        "f1-score": 0.7133057509206613,
+        "support": 614.0
+      },
+      "weighted avg": {
+        "precision": 0.7676543990146986,
+        "recall": 0.745928338762215,
+        "f1-score": 0.7489480818979334,
+        "support": 614.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        214,
+        54,
+        32
+      ],
+      [
+        17,
+        68,
+        32
+      ],
+      [
+        9,
+        12,
+        176
+      ]
+    ],
+    "model": "bardsai/twitter-sentiment-pl-base",
+    "max_length": 128,
+    "num_samples": 614,
+    "use_sigmoid": false,
+    "ambiguous_predictions": 0
+  },
+  {
+    "accuracy": 0.754071661237785,
+    "f1_macro": 0.7170043432440938,
+    "f1_weighted": 0.7564210892351112,
+    "classification_report": {
+      "minus": {
+        "precision": 0.9004149377593361,
+        "recall": 0.7233333333333334,
+        "f1-score": 0.8022181146025879,
+        "support": 300.0
+      },
+      "neutral": {
+        "precision": 0.4961832061068702,
+        "recall": 0.5555555555555556,
+        "f1-score": 0.5241935483870968,
+        "support": 117.0
+      },
+      "plus": {
+        "precision": 0.7479338842975206,
+        "recall": 0.9187817258883249,
+        "f1-score": 0.8246013667425968,
+        "support": 197.0
+      },
+      "accuracy": 0.754071661237785,
+      "macro avg": {
+        "precision": 0.7148440093879089,
+        "recall": 0.7325568715924046,
+        "f1-score": 0.7170043432440938,
+        "support": 614.0
+      },
+      "weighted avg": {
+        "precision": 0.7744639929135443,
+        "recall": 0.754071661237785,
+        "f1-score": 0.7564210892351112,
+        "support": 614.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        217,
+        57,
+        26
+      ],
+      [
+        17,
+        65,
+        35
+      ],
+      [
+        7,
+        9,
+        181
+      ]
+    ],
+    "model": "bardsai/twitter-sentiment-pl-base",
+    "max_length": 256,
+    "num_samples": 614,
+    "use_sigmoid": false,
+    "ambiguous_predictions": 0
+  },
+  {
+    "accuracy": 0.762214983713355,
+    "f1_macro": 0.7240271948174026,
+    "f1_weighted": 0.7642343412625716,
+    "classification_report": {
+      "minus": {
+        "precision": 0.9090909090909091,
+        "recall": 0.7333333333333333,
+        "f1-score": 0.8118081180811808,
+        "support": 300.0
+      },
+      "neutral": {
+        "precision": 0.5038759689922481,
+        "recall": 0.5555555555555556,
+        "f1-score": 0.5284552845528455,
+        "support": 117.0
+      },
+      "plus": {
+        "precision": 0.7530864197530864,
+        "recall": 0.9289340101522843,
+        "f1-score": 0.8318181818181818,
+        "support": 197.0
+      },
+      "accuracy": 0.762214983713355,
+      "macro avg": {
+        "precision": 0.7220177659454144,
+        "recall": 0.739274299680391,
+        "f1-score": 0.7240271948174026,
+        "support": 614.0
+      },
+      "weighted avg": {
+        "precision": 0.7818221266949898,
+        "recall": 0.762214983713355,
+        "f1-score": 0.7642343412625716,
+        "support": 614.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        220,
+        55,
+        25
+      ],
+      [
+        17,
+        65,
+        35
+      ],
+      [
+        5,
+        9,
+        183
+      ]
+    ],
+    "model": "bardsai/twitter-sentiment-pl-base",
+    "max_length": 512,
+    "num_samples": 614,
+    "use_sigmoid": false,
+    "ambiguous_predictions": 0
+  },
+  {
+    "accuracy": 0.9625407166123778,
+    "f1_macro": 0.976099753875927,
+    "f1_weighted": 0.9760521040889887,
+    "classification_report": {
+      "minus": {
+        "precision": 1.0,
+        "recall": 0.9566666666666667,
+        "f1-score": 0.9778534923339012,
+        "support": 300.0
+      },
+      "neutral": {
+        "precision": 0.9745762711864406,
+        "recall": 0.9829059829059829,
+        "f1-score": 0.9787234042553191,
+        "support": 117.0
+      },
+      "plus": {
+        "precision": 0.984375,
+        "recall": 0.9593908629441624,
+        "f1-score": 0.9717223650385605,
+        "support": 197.0
+      },
+      "micro avg": {
+        "precision": 0.9899497487437185,
+        "recall": 0.9625407166123778,
+        "f1-score": 0.9760528488852188,
+        "support": 614.0
+      },
+      "macro avg": {
+        "precision": 0.9863170903954802,
+        "recall": 0.9663211708389373,
+        "f1-score": 0.976099753875927,
+        "support": 614.0
+      },
+      "weighted avg": {
+        "precision": 0.9901421803400874,
+        "recall": 0.9625407166123778,
+        "f1-score": 0.9760521040889887,
+        "support": 614.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        287,
+        0,
+        2
+      ],
+      [
+        0,
+        115,
+        1
+      ],
+      [
+        0,
+        3,
+        189
+      ]
+    ],
+    "model": "nie3e/sentiment-polish-gpt2-small",
+    "max_length": 128,
+    "num_samples": 614,
+    "use_sigmoid": true,
+    "ambiguous_predictions": 17
+  },
+  {
+    "accuracy": 0.988599348534202,
+    "f1_macro": 0.9940769681032924,
+    "f1_weighted": 0.9934530769093918,
+    "classification_report": {
+      "minus": {
+        "precision": 0.9966329966329966,
+        "recall": 0.9866666666666667,
+        "f1-score": 0.9916247906197655,
+        "support": 300.0
+      },
+      "neutral": {
+        "precision": 1.0,
+        "recall": 0.9914529914529915,
+        "f1-score": 0.9957081545064378,
+        "support": 117.0
+      },
+      "plus": {
+        "precision": 1.0,
+        "recall": 0.9898477157360406,
+        "f1-score": 0.9948979591836735,
+        "support": 197.0
+      },
+      "micro avg": {
+        "precision": 0.9983552631578947,
+        "recall": 0.988599348534202,
+        "f1-score": 0.9934533551554828,
+        "support": 614.0
+      },
+      "macro avg": {
+        "precision": 0.9988776655443322,
+        "recall": 0.9893224579518997,
+        "f1-score": 0.9940769681032924,
+        "support": 614.0
+      },
+      "weighted avg": {
+        "precision": 0.9983548843483698,
+        "recall": 0.988599348534202,
+        "f1-score": 0.9934530769093918,
+        "support": 614.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        296,
+        0,
+        0
+      ],
+      [
+        1,
+        116,
+        0
+      ],
+      [
+        0,
+        0,
+        195
+      ]
+    ],
+    "model": "nie3e/sentiment-polish-gpt2-small",
+    "max_length": 256,
+    "num_samples": 614,
+    "use_sigmoid": true,
+    "ambiguous_predictions": 6
+  },
+  {
+    "accuracy": 0.993485342019544,
+    "f1_macro": 0.9960517593329808,
+    "f1_weighted": 0.9959186932231261,
+    "classification_report": {
+      "minus": {
+        "precision": 0.9966555183946488,
+        "recall": 0.9933333333333333,
+        "f1-score": 0.994991652754591,
+        "support": 300.0
+      },
+      "neutral": {
+        "precision": 1.0,
+        "recall": 0.9914529914529915,
+        "f1-score": 0.9957081545064378,
+        "support": 117.0
+      },
+      "plus": {
+        "precision": 1.0,
+        "recall": 0.9949238578680203,
+        "f1-score": 0.9974554707379135,
+        "support": 197.0
+      },
+      "micro avg": {
+        "precision": 0.9983633387888707,
+        "recall": 0.993485342019544,
+        "f1-score": 0.9959183673469387,
+        "support": 614.0
+      },
+      "macro avg": {
+        "precision": 0.9988851727982162,
+        "recall": 0.9932367275514483,
+        "f1-score": 0.9960517593329808,
+        "support": 614.0
+      },
+      "weighted avg": {
+        "precision": 0.9983658884664407,
+        "recall": 0.993485342019544,
+        "f1-score": 0.9959186932231261,
+        "support": 614.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        298,
+        0,
+        0
+      ],
+      [
+        1,
+        116,
+        0
+      ],
+      [
+        0,
+        0,
+        196
+      ]
+    ],
+    "model": "nie3e/sentiment-polish-gpt2-small",
+    "max_length": 512,
+    "num_samples": 614,
+    "use_sigmoid": true,
+    "ambiguous_predictions": 3
+  }
+]
