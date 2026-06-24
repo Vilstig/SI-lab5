@@ -22,6 +22,11 @@ JSON:""",
 
 GRID_MODE = "explicit"
 
+# Używane gdy GRID_MODE == "cartesian"
+PROMPTS_TO_RUN = ["basic_en", "polish", "json_en"]
+TEMPERATURES_TO_RUN = [0.0, 0.1, 0.5]
+PARSERS_TO_RUN = ["regex", "json"]
+QUANTIZATION_TO_RUN = [None, "4bit"]
 
 CUSTOM_EXPERIMENTS = [
     # Oś 1: prompt (T=0.1)
