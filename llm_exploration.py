@@ -9,8 +9,7 @@ import torch
 from encoder_utils import load_filtered_test_data, map_hf_labels_to_dataset, print_confusion_matrix
 from llm_config import (
     ENCODER_BASELINE_PATH,
-    EXPLORATION_BEST_CONFUSION_MATRIX,
-    EXPLORATION_BEST_PREDICTIONS,
+    EXPLORATION_ARTIFACTS_DIR,
     EXPLORATION_COMPARISON_PLOT,
     EXPLORATION_RESULTS_CSV,
     EXPLORATION_RESULTS_JSON,
@@ -105,6 +104,37 @@ def plot_comparison(df, path=EXPLORATION_COMPARISON_PLOT):
     print(f"Zapisano wykres porównawczy do: {path}")
 
 
+def save_experiment_artifacts(experiment_outputs, all_results, output_dir=EXPLORATION_ARTIFACTS_DIR):
+    output_dir = Path(output_dir)
+    predictions_dir = output_dir / "predictions"
+    matrices_dir = output_dir / "confusion_matrices"
+    predictions_dir.mkdir(parents=True, exist_ok=True)
+    matrices_dir.mkdir(parents=True, exist_ok=True)
+
+    results_by_name = {result["name"]: result for result in all_results}
+    for name, predictions_df in experiment_outputs.items():
+        out_df = pd.DataFrame(
+            {
+                "eksperyment": name,
+                "zdanie": predictions_df["sentence"],
+                "odpowiedz": predictions_df["raw_output"],
+                "wynik_prawidlowy": predictions_df["true_label"],
+                "wynik_llm": predictions_df["predicted_label"],
+            }
+        )
+        out_df.to_csv(predictions_dir / f"{name}.csv", index=False)
+
+        result = results_by_name[name]
+        plot_confusion_matrix(
+            result["confusion_matrix"],
+            path=matrices_dir / f"{name}.png",
+            title=f"Macierz pomyłek — {name}",
+        )
+
+    print(f"Zapisano predykcje ({len(experiment_outputs)}) do: {predictions_dir}/")
+    print(f"Zapisano macierze pomyłek ({len(experiment_outputs)}) do: {matrices_dir}/")
+
+
 def main(limit=None, only_aspect=None):
     save_artifacts = limit is None
 
@@ -155,14 +185,7 @@ def main(limit=None, only_aspect=None):
         )
         comparison_df.to_csv(EXPLORATION_RESULTS_CSV, index=False)
         plot_comparison(comparison_df)
-
-        if best is not None:
-            experiment_outputs[best["name"]].to_csv(EXPLORATION_BEST_PREDICTIONS, index=False)
-            plot_confusion_matrix(
-                best["confusion_matrix"],
-                path=EXPLORATION_BEST_CONFUSION_MATRIX,
-                title=f"Macierz pomyłek — {best['name']}",
-            )
+        save_experiment_artifacts(experiment_outputs, all_results)
 
         print(f"\nZapisano wyniki do: {EXPLORATION_RESULTS_JSON}")
         print(f"Zapisano tabelę porównawczą do: {EXPLORATION_RESULTS_CSV}")
