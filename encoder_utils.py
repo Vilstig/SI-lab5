@@ -48,6 +48,9 @@ def normalize_model_label(label):
         "pos": "plus",
         "neutral": "neutral",
         "ambiguous": "ambiguous",
+        "negatywny": "minus",
+        "pozytywny": "plus",
+        "neutralny": "neutral",
     }
     if key in mapping:
         return mapping[key]

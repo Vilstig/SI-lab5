@@ -7,3 +7,4 @@ matplotlib
 langchain-huggingface
 langchain-core
 tqdm
+pydantic
