@@ -24,7 +24,6 @@ DATASET_TO_HF_LABEL = {v: k for k, v in LABEL_MAP.items()}
 
 SIGMOID_MODELS = {
     "nie3e/sentiment-polish-gpt2-small",
-    "nie3e/sentiment-polish-gpt2-large",
 }
 
 
@@ -183,7 +182,7 @@ def predict_with_max_length(
             batch,
             truncation=True,
             max_length=max_length,
-            padding=True,
+            padding='max_length',
             return_tensors="pt",
         )
         encoding = {key: value.to(device) for key, value in encoding.items()}

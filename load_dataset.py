@@ -91,9 +91,6 @@ def print_sample_examples(df):
         print(f"\n[{readable}] {label}")
         print(f"  {sentence_preview}")
 
-    print("\nPodgląd pierwszych 5 wierszy:")
-    print(df.head())
-
 
 def save_filtered_dataset(df, path=FILTERED_OUTPUT_PATH):
     df.to_csv(path, index=False)
