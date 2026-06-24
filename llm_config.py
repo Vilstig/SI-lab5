@@ -1,7 +1,7 @@
 """Edytowalna konfiguracja LLM — zmieniaj tutaj prompty i siatkę eksperymentów."""
 
 LLM_MODEL_NAME = "Qwen/Qwen2.5-1.5B-Instruct"
-MAX_NEW_TOKENS = 15
+MAX_NEW_TOKENS = 10
 MAX_TEXT_CHARS = 2000
 MAX_INPUT_TOKENS = 512
 
@@ -10,7 +10,7 @@ PROMPT_REGISTRY = {
     "basic_en": """Classify the text sentiment into one of three classes: positive, negative, neutral.
 Text: {text}
 Class:""",
-    "polish": """Sklasyfikuj wydźwięk tekstu do jednej z trzech klas: pozytywny, negatywny, neutralny. Użyj tylko jednego z tych 3 słów w odpowiedzi.
+    "polish": """Jaki jest sentyment tego tekstu? Odpowiedz tylko jednym słowem: POZYTYWNY, NEGATYWNY lub NEUTRALNY.
 Tekst: {text}
 Klasa:""",
     "json_en": """Classify the sentiment of the text. Reply with JSON only, no other text.
@@ -24,7 +24,7 @@ GRID_MODE = "explicit"
 
 # Używane gdy GRID_MODE == "cartesian"
 PROMPTS_TO_RUN = ["basic_en", "polish", "json_en"]
-TEMPERATURES_TO_RUN = [0.0, 0.1, 0.5]
+TEMPERATURES_TO_RUN = [0.1, 1.0]
 PARSERS_TO_RUN = ["regex", "json"]
 QUANTIZATION_TO_RUN = [None, "4bit"]
 
@@ -34,7 +34,6 @@ CUSTOM_EXPERIMENTS = [
     {"name": "prompt_polish", "prompt_name": "polish", "temperature": 0.1, "parser": "regex", "aspect": "prompt"},
     {"name": "prompt_json_en", "prompt_name": "json_en", "temperature": 0.1, "parser": "json", "aspect": "prompt"},
     # Oś 2: temperatura (basic_en)
-    {"name": "temp_0.5", "prompt_name": "basic_en", "temperature": 0.5, "parser": "regex", "aspect": "temperature"},
     {"name": "temp_1.0", "prompt_name": "basic_en", "temperature": 1.0, "parser": "regex", "aspect": "temperature"},
     # Oś 3: kwantyzacja
     {
